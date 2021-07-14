@@ -1,19 +1,24 @@
 ---
-site: Pet Photos
+site: Cute Pet Photos
 ---
 <head>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 </head>
-<body>
-
+<body style="background-color:{{color_keyword}} ">
     <h1>{{ site }}</h1>
 
     {% unless page.url == '/' %}
     	<a href="/">Home</a>
     {% endunless %}
-
     {{ content }}
-
+        <ul>Photographer Credit
+            <ul>
+                <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}</li>
+                <li>{{photo_url}}</li>
+            </ul>
+        </ul>
+    </figure>
+    
     <ul>
         {% for photo in collections.photos %}
             <li>
