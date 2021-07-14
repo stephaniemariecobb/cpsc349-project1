@@ -17,10 +17,10 @@ site: Cute Pet Photos
                 <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
                 <li>{{photo_url}}</li>
                 {% unless photo_location_name == "" %}
-                <li>
-                    Photo taken at {{photo_location_name}}.
-                </li>
-            {% endunless %}
+                    <li>
+                        Photo taken at {{photo_location_name}}.
+                    </li>
+                {% endunless %}
             </ul>
         </ul>
     </figure>
