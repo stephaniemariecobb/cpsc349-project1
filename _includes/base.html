@@ -11,6 +11,7 @@ site: Cute Pet Photos
     	<a href="/">Home</a>
     {% endunless %}
     {{ content }}
+    {% unless page.url == '/' %}
         <ul>Photographer Credit
             <ul>
                 <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}</li>
@@ -18,6 +19,7 @@ site: Cute Pet Photos
             </ul>
         </ul>
     </figure>
+    {% endunless %}
     
     <ul>
         {% for photo in collections.photos %}
