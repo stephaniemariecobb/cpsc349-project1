@@ -1,26 +1,18 @@
+---
+title: Cute Pet Photos
+layout: myheader
+---
 <head>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 </head>
-<body style="background-color:{{color_keyword}} ">
+<body style="background-color:{{color_keyword}}">
     <h1>{{ site }}</h1>
 
-    {% unless page.url == '/' %}
-    <header>
-        <b><h1>Cute Pet Photos</h1></b>
-        <img src ="/logo.jpeg" alt="Cute Pet Photos">
-        <nav>
-            <b><a href="/">Home</a></b>
-            <b><a href="/aboutUs">About Us</a></b>
-            <b><a href="https://github.com/ryan-broguiere/cpsc349-project1">Contact</a></b>
-        </nav>
-        </header>
-        
-    {% endunless %}
     {{ content }}
+    
     {% unless page.url == '/' %}
         <ul>Photograph Information
-            <ul>              
-            
+            <ul>
             {% unless exif_camera_model == "" %}
                 <li>Camera Model: {{exif_camera_model}}</li>
             {% endunless %}
@@ -42,34 +34,4 @@
         </ul>
     </figure>
     {% endunless %}
-    
-
-    <footer>
-           
-        <f1>
-            <b>CS 349 Project 1</b><br>
-        </f1>
-          
-                
-        <f2>
-            Photo Credit:
-            <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Unsplash.com 
-            </a><br>
-        </f2>
-    
-        <f3>
-            <a href="https://github.com/ryan-broguiere/cpsc349-project1">
-                Github Link
-            </a><br>
-        </f3>
-    
-        <f4>
-            <a href="https://unsplash.com/license">
-                Copyright Policy
-            </a>
-        </f4>
-    
-    </ul>
-    </footer>
 </body>
