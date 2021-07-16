@@ -9,39 +9,35 @@ site: Cute Pet Photos
 
     {% unless page.url == '/' %}
     <header>
-        <h1>Cute Pet Photos</h1>
-        <img src ="logo.jpeg" alt="company logo">
+        <b><h1>Cute Pet Photos</h1></b>
+        <img src ="/logo.jpeg" alt="Cute Pet Photos">
         <nav>
-            <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/aboutUs.html">About Us</a></li>
-            <li><a href="https://github.com/ryan-broguiere/cpsc349-project1">Contact</a></li>
-            </ul>
+            
+            
+            <b><a href="/">Home</a></b>
+            <b><a href="/aboutUs.html">About Us</a></b>
+            <b><a href="https://github.com/ryan-broguiere/cpsc349-project1">Contact</a></b>
+    
+            
+        
         </nav>
         </header>
+        
     {% endunless %}
     {{ content }}
     {% unless page.url == '/' %}
-    <ul>Photograph Details
-        <ul>
-            {% unless photo_id == "" %}
-                <li>ID: {{photo_id}}.</li>
-            {% endunless %}
-            <li>Camera Model: {{exif_camera_model}}</li>
-            <li>Date of Creation: {{photo_submitted_at}}</li>
+        <ul>Photographer Credit
+            <ul>
+                <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
+                <li>{{photo_url}}</li>
+                {% unless photo_location_name == "" %}
+                    <li>
+                        Photo taken at {{photo_location_name}}.
+                    </li>
+                {% endunless %}
+            </ul>
         </ul>
-    </ul>
-    <ul>Photographer Credit
-        <ul>
-            <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
-            <li>{{photographer_username}} @ {{photo_url}}</li>
-            {% unless photo_location_name == "" %}
-                <li>
-                    Photo taken at {{photo_location_name}}.
-                </li>
-            {% endunless %}
-        </ul>
-    </ul>
+    </figure>
     {% endunless %}
     
     <ul>
