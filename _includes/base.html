@@ -12,12 +12,10 @@ site: Cute Pet Photos
         <h1 style="color:orange;font-size:40px">Cute Pet Photos</h1>
         <img src ="/logo.jpeg" alt="Cute Pet Photos">
         <nav>
-            
             <ul>
             <li><a href="/" style = "font-size:30px;padding-left:200px">Home</a></li>
             <li style="padding-left:150px"><a href="/" style = "font-size:30px;">About Us</a></li>
             <li style="padding-left:150px"><a href="https://github.com/ryan-broguiere/cpsc349-project1" style = "font-size:30px;">Contact</a></li>
-    
             </ul>
         
         </nav>
@@ -25,18 +23,26 @@ site: Cute Pet Photos
     {% endunless %}
     {{ content }}
     {% unless page.url == '/' %}
-        <ul>Photographer Credit
-            <ul>
-                <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
-                <li>{{photo_url}}</li>
-                {% unless photo_location_name == "" %}
-                    <li>
-                        Photo taken at {{photo_location_name}}.
-                    </li>
-                {% endunless %}
-            </ul>
+    <ul>Photograph Details
+        <ul>
+            {% unless photo_id == "" %}
+                <li>ID: {{photo_id}}.</li>
+            {% endunless %}
+            <li>Camera Model: {{exif_camera_model}}</li>
+            <li>Date of Creation: {{photo_submitted_at}}</li>
         </ul>
-    </figure>
+    </ul>
+    <ul>Photographer Credit
+        <ul>
+            <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
+            <li>{{photographer_username}} @ {{photo_url}}</li>
+            {% unless photo_location_name == "" %}
+                <li>
+                    Photo taken at {{photo_location_name}}.
+                </li>
+            {% endunless %}
+        </ul>
+    </ul>
     {% endunless %}
     
     <ul>
