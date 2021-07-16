@@ -19,9 +19,8 @@
     {{ content }}
     {% unless page.url == '/' %}
         <ul>Photograph Information
-            <ul>{% unless photo_id == "" %}
-                <li>ID: {{photo_id}}</li>
-            {% endunless %}
+            <ul>              
+            
             {% unless exif_camera_model == "" %}
                 <li>Camera Model: {{exif_camera_model}}</li>
             {% endunless %}
@@ -33,7 +32,7 @@
         <ul>Photographer Credit
             <ul>
                 <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
-                <li>{{photo_url}}</li>
+                <li><a href = "{{photo_url}}">{{photo_url}}</a></li>
                 {% unless photo_location_name == "" %}
                     <li>
                         Photo taken at {{photo_location_name}}.
