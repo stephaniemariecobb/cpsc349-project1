@@ -1,33 +1,23 @@
 ---
-title: Cute Pet Photos
 layout: myheader
 ---
-<body style="background-color:{{color_keyword}}">
+<body style="background-color: {{color_keyword}}">
 
     {{content}}
     
     {% unless page.url == '/' %}
-        <ul>Photograph Information
-            <ul>
-            {% unless exif_camera_model == "" %}
-                <li>Camera Model: {{exif_camera_model}}</li>
-            {% endunless %}
-            {% unless photo_id == "" %}
-                <li>Date of Creation: {{photo_submitted_at}}</li>
-            {% endunless %} 
-            </ul>
-        </ul>
-        <ul>Photographer Credit
-            <ul>
-                <li>A {{photo_keyword}} photo by {{photographer_first_name}} {{photographer_last_name}}.</li>
-                <li><a href = "{{photo_url}}">{{photo_url}}</a></li>
-                {% unless photo_location_name == "" %}
-                    <li>
-                        Photo taken at {{photo_location_name}}.
-                    </li>
-                {% endunless %}
-            </ul>
-        </ul>
+        <p><b>Photograph Information</b></p>
+        A {{photo_keyword}} photo by {{photographer_first_name}}{% unless photographer_last_name == "" %} {{photographer_last_name}}{% endunless %}.<br>
+        <a href = "{{photo_url}}">{{photo_url}}</a><br>
+        {% unless photo_location_name == "" %}
+        Photo taken at {{photo_location_name}}.<br>
+        {% endunless %}
+        {% unless photo_submitted_at == "" %}
+        Date of Creation: {{photo_submitted_at}}<br>
+        {% endunless %}
+        {% unless exif_camera_model == "" %}
+        Camera Model: {{exif_camera_model}}
+        {% endunless %}
     {% endunless %}
-
+    
 </body>
