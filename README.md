@@ -47,7 +47,8 @@ Open the [newly generated site][4].
 # Group Members
 - Ryan Broguiere
 - Stephanie Cobb
-- CJ Thompson
 - Gilbert Galvan
+- CJ Thompson
+
 
 [5]: http://localhost:8080/
