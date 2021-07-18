@@ -41,6 +41,7 @@ Open the [newly generated site][4].
 # Regular Use
 
 'cd' into the "cpsc349-project1" directory and use the command 'npm start'
+
 [Localhost Website Link][5]
 
 # Group Members
