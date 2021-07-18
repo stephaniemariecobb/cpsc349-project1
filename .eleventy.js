@@ -1,6 +1,8 @@
-module.exports = function(eleventyConfig) {
-    eleventyConfig.setUseGitIgnore(false);
-};
 module.exports = {
-    pathPrefix: "/cpsc349-project1"
+    dir: {
+        input: "src",
+        output: "docs"
+    }
+
 };
+
