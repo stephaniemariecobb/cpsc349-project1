@@ -41,10 +41,12 @@ Open the [newly generated site][4].
 # Regular Use
 
 'cd' into the "cpsc349-project1" directory and use the command 'npm start'
-http://localhost:8080/
+[Localhost Website Link][5]
 
 # Group Members
 - Ryan Broguiere
 - Stephanie Cobb
 - CJ Thompson
 - Gilbert Galvan
+
+[5]: http://localhost:8080/
