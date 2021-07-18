@@ -1,4 +1,6 @@
-# Getting started with Project 1
+# How to use our website
+
+#First time
 
 Install [q][1] in order to run SQL directly on TSV files:
 
@@ -10,7 +12,7 @@ $ sudo apt install python3-q-text-as-data
 Clone the GitHub repository:
 
 ```shell-session
-$ git clone https://github.com/ProfAvery/cpsc349-project1.git
+$ git clone https://github.com/ryan-broguiere/cpsc349-project1.git
 ```
 
 Download the [Unsplash Lite dataset][2] and extract some pet photos:
@@ -23,7 +25,7 @@ $ make
 Install and start the [Eleventy static site generator][3]:
 
 ```shell-session
-$ cd ..
+$ cd .. or cd-
 $ npm install
 $ npm start
 
