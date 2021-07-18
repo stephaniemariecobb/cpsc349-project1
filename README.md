@@ -1,6 +1,6 @@
 # How to use our website
 
-#First time
+# First time
 
 Install [q][1] in order to run SQL directly on TSV files:
 
@@ -37,3 +37,7 @@ Open the [newly generated site][4].
 [2]: https://github.com/unsplash/datasets
 [3]: https://www.11ty.dev/
 [4]: http://localhost:8080/
+
+# Regular Use
+
+cd into the directory and 'npm start'
