@@ -1,7 +1,7 @@
-_site/
-photos/
+/photos/
 node_modules/
 *.zip
 unsplash/*.tsv*
 unsplash/README.md
 unsplash/TERMS.md
+/_site/
